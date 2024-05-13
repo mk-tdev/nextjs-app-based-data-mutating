@@ -19,7 +19,6 @@ function ImagePicker({ label, name }: any) {
       return;
     }
 
-    console.log(file);
     const fileReader = new FileReader();
     fileReader.onload = () => {
       setUploadedFile(fileReader.result);
