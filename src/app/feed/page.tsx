@@ -1,6 +1,20 @@
 import PostsList from "@/components/posts";
 import { getPosts } from "../../lib/posts";
 
+// export const metadata = {
+//   title: "Feed",
+//   description: "Browse the latest posts on the platform.",
+// };
+
+export const generateMetadata = async (config: any) => {
+  const posts = (await getPosts()) || [];
+
+  return {
+    title: "Feed" + " (" + posts.length + " posts)",
+    description: "Browse the latest posts on the platform.",
+  };
+};
+
 const Feed = async () => {
   const posts = (await getPosts()) || [];
 
