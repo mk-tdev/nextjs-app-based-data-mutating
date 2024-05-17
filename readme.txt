@@ -9,3 +9,7 @@ https://nextjs.org/docs/app/building-your-application/rendering/composition-patt
 
 revalidating pages
 optimistic updates
+Image from next
+cloudinary config for images from URL
+image resize and other props
+image optimization with quality

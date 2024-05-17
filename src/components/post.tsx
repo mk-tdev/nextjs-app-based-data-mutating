@@ -1,4 +1,9 @@
 import { togglePostLike } from "@/lib/postsAction";
+import Image from "next/image";
+
+const imageLoader = (config: any) => {
+  return config.src;
+};
 
 const PostItem = ({ post, action }: any) => {
   return (
@@ -6,10 +11,14 @@ const PostItem = ({ post, action }: any) => {
       <h3 className="text-lg font-bold">{post.title}</h3>
       <p className="text-gray-600">{post.content}</p>
       <div className="flex justify-between items-center mt-4">
-        <div>
-          <img
+        <div className="h-20 w-20 relative">
+          <Image
+            quality={50}
             src={post.image}
             alt={post.title}
+            sizes="20"
+            width={50}
+            height={50}
             className="w-20 h-20 object-cover rounded-md"
           />
         </div>

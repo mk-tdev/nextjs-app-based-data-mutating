@@ -13,7 +13,13 @@ function AppHeader() {
     <header className="flex flex-row shadow-lg bg-green-600 text-white p-4 gap-3 items-center">
       <div>
         <Link href={"/"}>
-          <Image src={iconImg} alt="about food" height={50} priority />
+          <Image
+            src={iconImg}
+            alt="about food"
+            height={50}
+            // sizes="10vw"
+            priority
+          />
         </Link>
       </div>
 
